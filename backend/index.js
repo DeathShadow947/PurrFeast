@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
@@ -25,4 +23,4 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Server is running on port ${PORT}`);
 });
->>>>>>> 117756bd (⚡ Switched to Supabase, removed MongoDB files, updated product controller)
+
