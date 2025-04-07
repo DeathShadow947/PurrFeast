@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProductsPage from './pages/ProductsPage';
 import Navbar from './components/Navbar';
+import AuthForm from './pages/AuthForm';
+import './App.css';
 
 function App() {
   return (
@@ -9,11 +11,14 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<ProductsPage />} />
-        {/* Future pages can go here */}
-        {/* <Route path="/about" element={<AboutPage />} /> */}
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/auth" element={<AuthForm />} />
       </Routes>
     </Router>
+    
   );
 }
-
+<div className="auth-page">
+  <AuthForm />
+</div>
 export default App;

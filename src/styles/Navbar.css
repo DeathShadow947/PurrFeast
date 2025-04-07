@@ -8,6 +8,13 @@
     position: sticky;
     top: 0;
     z-index: 999;
+    background: url('../assets/images/homebg.png') repeat;
+    background-size: 250px;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-blend-mode: soft-light, luminosity;
+    backdrop-filter: blur(100px);
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
   }
   
   .logo {
