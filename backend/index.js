@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
-
+const authRoutes = require('./routes/authRoutes');
 const productRoutes = require('./routes/productRoutes');
 
 const app = express();
@@ -13,6 +13,7 @@ app.use(express.json());
 
 // Mount routes
 app.use('/api/products', productRoutes); // Will serve /api/products
+app.use('/api/auth', authRoutes);
 
 // Simple Test Route
 app.get('/', (req, res) => {

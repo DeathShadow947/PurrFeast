@@ -11,17 +11,28 @@ const ProductsPage = () => {
       .catch(err => console.error(err));
   }, []);
 
+  const handleAddToCart = (product) => {
+    console.log('Add to Cart clicked:', product);
+    // Later: save to context/localStorage/state
+  };
+
   return (
     <div className="products-wrapper">
-      <h2 className="section-title">🐾 Our PurrFeast Meals</h2>
+      <h2 className="section-title">🐾 Our Meowlicious Meals</h2>
       <div className="product-grid">
         {products.map(product => (
-          <div className="product-card" key={product._id}>
-            <img src={product.image} alt={product.name} />
+          <div className="product-card" key={product.id || product._id}>
+            <img src={product.image} alt={product.name} className="product-image" />
             <div className="card-content">
               <h3>{product.name}</h3>
               <p>{product.description}</p>
               <span className="price">৳{product.price}</span>
+              <button
+                className="add-to-cart-btn"
+                onClick={() => handleAddToCart(product)}
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
         ))}

@@ -18,7 +18,5 @@ function App() {
     
   );
 }
-<div className="auth-page">
-  <AuthForm />
-</div>
+
 export default App;
